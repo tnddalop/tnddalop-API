@@ -16,9 +16,8 @@ export default defineConfig(({ mode }) => {
       },
       resolve: {
         alias: {
-          // Fix: __dirname is not available in ES modules. Using '.' resolves to the project root.
-          '@': path.resolve('.'),
+          '@': path.resolve(__dirname, '.'),
         }
       }
     };
-}); 
+});
